@@ -68,9 +68,17 @@ public partial class AmmoStorageComponent : EntityComponent<Player>, ISingletonC
 		switch ( ammo )
 		{
 			case AmmoType.Pistol: return 250;
-			case AmmoType.SMG: return 36;
+			case AmmoType.Python: return 36;
 			case AmmoType.Buckshot: return 100;
-			case AmmoType.Rifle: return 40;
+			case AmmoType.Crossbow: return 40;
+			case AmmoType.RPG: return 5;
+			case AmmoType.Uranium: return 100;
+			case AmmoType.Grenade: return 10;
+			case AmmoType.SMGGrenade: return 10;
+			case AmmoType.Satchel: return 5;
+			case AmmoType.Tripmine: return 5;
+			case AmmoType.Snark: return 15;
+			case AmmoType.Hornet: return 8;
 		}
 
 		return 0;
@@ -80,8 +88,15 @@ public enum AmmoType
 {
 	None,
 	Pistol,
-	SMG,
 	Buckshot,
-	Rifle,
-
+	Crossbow,
+	Python,
+	Grenade,
+	SMGGrenade,
+	Satchel,
+	Tripmine,
+	Snark,
+	RPG,
+	Uranium,
+	Hornet
 }
