@@ -1,0 +1,3 @@
+[submodule "code/XeNPC"]
+	path = code/XeNPC
+	url = https://github.com/Xenthio/XeNPC
