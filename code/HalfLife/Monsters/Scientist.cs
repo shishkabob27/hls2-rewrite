@@ -25,18 +25,19 @@ public class Scientist : NPC
 			case 3: return "models/hl1/monster/scientist/scientist_04.vmdl";
 			default: return "models/hl1/monster/scientist/scientist_01.vmdl";
 		}
-	}
-
-	public override void Think()
-	{
-		base.Think();
-		TryMove();
-	}
+	} 
 
 	public override void Spawn()
 	{
 		base.Spawn();
 		SetModel( SetScientistModel() );
 		SetupPhysicsFromAABB( PhysicsMotionType.Keyframed, new Vector3( -16, -16, 0 ), new Vector3( 16, 16, 72 ) );
+		Health = 20;
+	}
+
+	public override void Think()
+	{
+		base.Think();
+		TryMove();
 	}
 }
