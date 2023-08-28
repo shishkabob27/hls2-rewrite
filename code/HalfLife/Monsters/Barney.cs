@@ -20,6 +20,8 @@ public class Barney : NPC
 	public override void Think()
 	{
 		base.Think();
+		Velocity = 0;
+		TryNavigate();
 		TryMove();
 	}
 }

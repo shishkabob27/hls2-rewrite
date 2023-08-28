@@ -11,6 +11,7 @@ public class Scientist : NPC
 {
 	[Property]
 	public float Body { get; set; } = -1;
+	public override float MovementSpeed => 70;
 	public string SetScientistModel()
 	{
 		if (Body == -1)
@@ -32,12 +33,14 @@ public class Scientist : NPC
 		base.Spawn();
 		SetModel( SetScientistModel() );
 		SetupPhysicsFromAABB( PhysicsMotionType.Keyframed, new Vector3( -16, -16, 0 ), new Vector3( 16, 16, 72 ) );
-		Health = 20;
+		Health = 20; 
 	}
 
 	public override void Think()
 	{
 		base.Think();
+		Velocity = 0;
+		TryNavigate();
 		TryMove();
 	}
 }
