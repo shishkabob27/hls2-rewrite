@@ -1,8 +1,8 @@
 {
-  "Title": "Easy FPS Base",
+  "Title": "Half-Life: Source 2 (Rewrite)",
   "Type": "game",
-  "Org": "xenthio",
-  "Ident": "easy_fps_base",
+  "Org": "shishkabob",
+  "Ident": "hls2-rewrite",
   "Tags": null,
   "Schema": 1,
   "HasAssets": true,
