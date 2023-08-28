@@ -18,7 +18,7 @@ public class Pistol : Gun
 	{
 		PrimaryAmmo -= 1;
 		ShootBullet( 8, 0.05f );
-		PlaySound( "pistol.shoot" );
+		PlaySound( "pistol_shot" );
 		(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 		if ( Game.IsClient )
 		{
