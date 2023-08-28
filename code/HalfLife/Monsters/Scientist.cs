@@ -27,6 +27,12 @@ public class Scientist : NPC
 		}
 	}
 
+	public override void Think()
+	{
+		base.Think();
+		TryMove();
+	}
+
 	public override void Spawn()
 	{
 		base.Spawn();
