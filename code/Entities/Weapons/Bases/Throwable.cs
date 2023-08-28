@@ -1,6 +1,6 @@
 ﻿using Sandbox;
 
-namespace MyGame;
+namespace HLS2;
 public partial class Throwable : Carriable
 {
 	[ConVar.Replicated] public static bool sv_infinite_grenade { get; set; } = false;

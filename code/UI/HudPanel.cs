@@ -1,5 +1,5 @@
 ﻿using Sandbox;
-namespace MyGame;
+namespace HLS2;
 public class HUDEntity : HudEntity<HUDRootPanel>
 {
 	public static HUDEntity Current;

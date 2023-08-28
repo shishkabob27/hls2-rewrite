@@ -3,7 +3,7 @@ using Sandbox;
 using System;
 using System.Collections.Generic;
 
-namespace MyGame;
+namespace HLS2;
 [Library]
 public partial class WalkController : MovementComponent
 {

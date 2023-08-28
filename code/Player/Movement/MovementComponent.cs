@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MyGame;
+namespace HLS2;
 
 /// <summary>
 /// Component designed for movement, only 1 per pawn.

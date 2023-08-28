@@ -1,6 +1,6 @@
 ﻿using Sandbox;
 
-namespace MyGame;
+namespace HLS2;
 
 public partial class Corpse : ModelEntity
 {

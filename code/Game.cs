@@ -3,7 +3,7 @@
 //
 // You don't need to put things in a namespace, but it doesn't hurt.
 //
-namespace MyGame;
+namespace HLS2;
 
 /// <summary>
 /// This is your game class. This is an entity that is created serverside when

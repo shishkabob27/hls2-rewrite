@@ -1,7 +1,7 @@
 ﻿
 
 using Sandbox;
-namespace MyGame;
+namespace HLS2;
 public class UnstuckComponent : EntityComponent<Player>
 {
 	public bool Debug = false;

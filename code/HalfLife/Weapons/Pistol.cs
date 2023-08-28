@@ -1,6 +1,6 @@
 ﻿using Sandbox;
 
-namespace MyGame;
+namespace HLS2;
 public class Pistol : Gun
 {
 	public override string ViewModelPath => "weapons/rust_pistol/v_rust_pistol.vmdl";

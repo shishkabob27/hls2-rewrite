@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MyGame;
+namespace HLS2;
 public partial class AmmoStorageComponent : EntityComponent<Player>, ISingletonComponent
 {
 	[Net, Local]

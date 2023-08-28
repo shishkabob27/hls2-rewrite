@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace MyGame;
+namespace HLS2;
 public struct BulletInfo
 {
 	public BulletInfo()

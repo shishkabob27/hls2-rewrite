@@ -1,6 +1,6 @@
 ﻿using Sandbox;
 
-namespace MyGame;
+namespace HLS2;
 
 /// <summary>
 /// Component designed for animation stuff, only 1 per pawn.

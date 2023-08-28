@@ -1,6 +1,6 @@
 ﻿using Sandbox;
 using System.Collections.Generic;
-namespace MyGame;
+namespace HLS2;
 public partial class InventoryComponent : SimulatedComponent, ISingletonComponent
 {
 	[Net, Predicted] public Entity ActiveChild { get; set; }

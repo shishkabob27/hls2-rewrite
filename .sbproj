@@ -72,9 +72,9 @@
     "TickRate": 50,
     "LaunchConfigs": [
       {
-        "Name": "My New Config",
-        "GameIdent": "xenthio.easy_fps_base#local",
-        "MapName": "facepunch.square",
+        "Name": "FPSTestingMap",
+        "GameIdent": "shishkabob.hls2-rewrite#local",
+        "MapName": "xenthio.fpstestingkit",
         "MaxPlayers": 1,
         "GameSettings": {},
         "Addons": "",
@@ -82,9 +82,9 @@
         "PostLaunchCommand": ""
       },
       {
-        "Name": "Untitled Config",
-        "GameIdent": "xenthio.easy_fps_base#local",
-        "MapName": "fpstestingkit.vmap",
+        "Name": "Anomalous Materials",
+        "GameIdent": "shishkabob.hls2-rewrite#local",
+        "MapName": "campiagn/hls2_c2p0/hls2_c2p0.vmap",
         "MaxPlayers": 1,
         "GameSettings": {},
         "Addons": "",

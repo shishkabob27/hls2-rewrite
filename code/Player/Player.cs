@@ -3,10 +3,11 @@ using System;
 using System.ComponentModel;
 using System.Linq;
 
-namespace MyGame;
+namespace HLS2;
 
 partial class Player : AnimatedEntity
 {
+	[Net] public float Suit { get; set; } = 0;
 	/// <summary>
 	/// Called when the entity is first created 
 	/// </summary>

@@ -1,7 +1,7 @@
 ﻿using Sandbox;
 using System.Linq;
 
-namespace MyGame;
+namespace HLS2;
 /// <summary>
 ///  Something that can go into the player's inventory and have a worldmodel and viewmodel etc, 
 /// </summary>

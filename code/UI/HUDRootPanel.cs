@@ -1,5 +1,5 @@
 ﻿using Sandbox.UI;
-namespace MyGame;
+namespace HLS2;
 
 public class HUDRootPanel : RootPanel
 {

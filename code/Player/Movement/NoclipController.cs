@@ -1,7 +1,7 @@
 ﻿
 using Sandbox;
 
-namespace MyGame;
+namespace HLS2;
 [Library]
 public partial class NoclipController : MovementComponent
 {

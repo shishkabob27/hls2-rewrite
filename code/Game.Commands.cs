@@ -1,7 +1,7 @@
 ﻿using Sandbox;
 using System.Linq;
 
-namespace MyGame;
+namespace HLS2;
 public partial class MyGame
 {
 
