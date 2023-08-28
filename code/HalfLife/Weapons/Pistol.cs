@@ -1,19 +1,24 @@
-﻿using Sandbox;
+﻿using Editor;
+using Sandbox;
 
 namespace HLS2;
+[Library( "weapon_9mmhandgun" ), HammerEntity]
+[Alias( "weapon_glock" )]
+[EditorModel( "models/hl1/weapons/world/glock.vmdl" )]
+[Title( "Pistol" ), Category( "Weapons" )]
 public class Pistol : Gun
 {
-	public override string ViewModelPath => "weapons/rust_pistol/v_rust_pistol.vmdl";
-	public override string WorldModelPath => "weapons/rust_pistol/rust_pistol.vmdl";
-	public override float PrimaryAttackDelay => 0.1f;
-	public override float PrimaryReloadDelay => 3.0f;
+	public override string ViewModelPath => "models/hl1/weapons/view/v_glock.vmdl";
+	public override string WorldModelPath => "models/hl1/weapons/world/glock.vmdl";
+	public override float PrimaryAttackDelay => 0.31f;
+	public override float PrimaryReloadDelay => 1.4f;
 	public override int MaxPrimaryAmmo => 17;
 	public override AmmoType PrimaryAmmoType => AmmoType.Pistol;
 	public override void PrimaryAttack()
 	{
 		PrimaryAmmo -= 1;
-		ShootBullet( 10, 0.02f );
-		PlaySound( "rust_pistol.shoot" );
+		ShootBullet( 8, 0.05f );
+		PlaySound( "pistol.shoot" );
 		(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 		if ( Game.IsClient )
 		{
