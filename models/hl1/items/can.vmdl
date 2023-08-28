@@ -1,0 +1,170 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "canbutt.vmat"
+								to = "materials/hl1/items/can/cantop.vmat"
+							},
+							{
+								from = "cantop.vmat"
+								to = "materials/hl1/items/can/cantop.vmat"
+							},
+							{
+								from = "gensoda1.vmat"
+								to = "materials/hl1/items/can/gensoda1.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+					{
+						_class = "MaterialGroup"
+						name = "coke"
+						remaps = 
+						[
+							{
+								from = "materials/hl1/items/can/cantop.vmat"
+								to = "materials/hl1/items/can/cantop.vmat"
+							},
+							{
+								from = "materials/hl1/items/can/gensoda1.vmat"
+								to = "materials/hl1/items/can/coke.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "sprite"
+						remaps = 
+						[
+							{
+								from = "materials/hl1/items/can/cantop.vmat"
+								to = "materials/hl1/items/can/cantop.vmat"
+							},
+							{
+								from = "materials/hl1/items/can/gensoda1.vmat"
+								to = "materials/hl1/items/can/sprite.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "diet"
+						remaps = 
+						[
+							{
+								from = "materials/hl1/items/can/cantop.vmat"
+								to = "materials/hl1/items/can/cantop.vmat"
+							},
+							{
+								from = "materials/hl1/items/can/gensoda1.vmat"
+								to = "materials/hl1/items/can/diet.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "mmaid"
+						remaps = 
+						[
+							{
+								from = "materials/hl1/items/can/cantop.vmat"
+								to = "materials/hl1/items/can/cantop.vmat"
+							},
+							{
+								from = "materials/hl1/items/can/gensoda1.vmat"
+								to = "materials/hl1/items/can/mmaid.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "surge"
+						remaps = 
+						[
+							{
+								from = "materials/hl1/items/can/cantop.vmat"
+								to = "materials/hl1/items/can/cantop.vmat"
+							},
+							{
+								from = "materials/hl1/items/can/gensoda1.vmat"
+								to = "materials/hl1/items/can/surge.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "moxie"
+						remaps = 
+						[
+							{
+								from = "materials/hl1/items/can/cantop.vmat"
+								to = "materials/hl1/items/can/cantop.vmat"
+							},
+							{
+								from = "materials/hl1/items/can/gensoda1.vmat"
+								to = "materials/hl1/items/can/moxie.vmat"
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsHullFromRender"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						faceMergeAngle = 20.0
+						maxHullVertices = 32
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/hl1decomp/can/gensoda1.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"can",
+								"gensoda1",
+							]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

@@ -1,0 +1,25 @@
+"Layer0"
+{
+	"shader"		"shaders/envsprite.shader_c"
+	"F_ADDITIVE_BLEND"		"1"
+	"g_flModelTintAmount"		"1.000000"
+	"g_vColorTint"		"[0.952941 0.000000 0.000000 0.000000]"
+	"g_flFadeExponent"		"1.000000"
+	"g_flTintColor"		"[1.000000 1.000000 1.000000 0.000000]"
+	"TextureColor"		"materials/hl1/sprites/glow04.png"
+	"TextureTintMask"		"materials/default/default.tga"
+	"g_nScaleTexCoordUByModelScaleAxis"		"0"
+	"g_nScaleTexCoordVByModelScaleAxis"		"0"
+	"g_vTexCoordOffset"		"[0.000 0.000]"
+	"g_vTexCoordScale"		"[1.000 1.000]"
+	"g_vTexCoordScrollSpeed"		"[0.000 0.000]"
+	"Attributes"
+	{
+		"rendercolor"		"0 0 0"
+	}
+	"DynamicParams"
+	{
+		"g_vColorTint"		"return float4(rendercolor.r/255,rendercolor.g/255,rendercolor.b/255,0)"
+		"g_flTintColor"		"return float4(rendercolor.x*1,rendercolor.y*1,rendercolor.z *1,0)"
+	}
+}

@@ -1,0 +1,12 @@
+"Layer0"
+{
+	"shader"		"shaders/projected_decals.shader_c"
+	"TextureAmbientOcclusion"		"materials/default/default_ao.tga"
+	"TextureColor"		"materials/decals/_shot4.tga"
+	"g_bFogEnabled"		"1"
+	"g_flDirectionalLightmapMinZ"		"0.050000"
+	"g_flDirectionalLightmapStrength"		"1.000000"
+	"g_flGlossiness"		"0.500000"
+	"TextureMetalness"		"materials/default/default_metal.tga"
+	"TextureTranslucency"		"materials/decals/_shot4_a_trans.tga"
+}

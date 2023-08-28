@@ -1,0 +1,302 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "hold_R"
+						origin = [ -9.90797, 0.0, 0.853155 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						do_not_discard = true
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "bowchrome.vmat"
+								to = "materials/hl1/weapons/world/crossbow/bowchrome.vmat"
+							},
+							{
+								from = "clip_side.vmat"
+								to = "materials/hl1/weapons/world/crossbow/clip_side.vmat"
+							},
+							{
+								from = "mechanismside.vmat"
+								to = "materials/hl1/weapons/world/crossbow/mechanismside.vmat"
+							},
+							{
+								from = "receiverside.vmat"
+								to = "materials/hl1/weapons/world/crossbow/receiverside.vmat"
+							},
+							{
+								from = "sightcyl.vmat"
+								to = "materials/hl1/weapons/world/crossbow/sightcyl.vmat"
+							},
+							{
+								from = "stock.vmat"
+								to = "materials/hl1/weapons/world/crossbow/stock.vmat"
+							},
+							{
+								from = "string.vmat"
+								to = "materials/hl1/weapons/world/crossbow/string.vmat"
+							},
+							{
+								from = "world_grip.vmat"
+								to = "materials/hl1/weapons/world/crossbow/world_grip.vmat"
+							},
+							{
+								from = "world_shoulder.vmat"
+								to = "materials/hl1/weapons/world/crossbow/world_shoulder.vmat"
+							},
+							{
+								from = "world_slide.vmat"
+								to = "materials/hl1/weapons/world/crossbow/world_slide.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeCylinder"
+						parent_bone = "line01"
+						surface_prop = "default"
+						collision_tags = "solid"
+						radius = 2.203498
+						point0 = [ 0.799007, 1.058832, 2.975586 ]
+						point1 = [ 22.668274, -1.339775, 2.547466 ]
+					},
+					{
+						_class = "PhysicsShapeCylinder"
+						parent_bone = "line01"
+						surface_prop = "default"
+						collision_tags = "solid"
+						radius = 2.269182
+						point0 = [ -16.608322, 0.850193, 1.079891 ]
+						point1 = [ 1.776921, 0.557007, 1.631485 ]
+					},
+					{
+						_class = "PhysicsShapeCylinder"
+						parent_bone = "line01"
+						surface_prop = "default"
+						collision_tags = "solid"
+						radius = 2.203498
+						point0 = [ -13.985236, 1.569741, -12.222603 ]
+						point1 = [ -13.528501, 1.773009, 12.349819 ]
+					},
+					{
+						_class = "PhysicsShapeCylinder"
+						parent_bone = "line01"
+						surface_prop = "default"
+						collision_tags = "solid"
+						radius = 2.269182
+						point0 = [ -11.412401, -8.340722, 1.150371 ]
+						point1 = [ -4.627405, 1.016499, 1.310385 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/hl1decomp/w_crossbow/w_crossbow.smd"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 0.5
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"w_crossbow",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = ""
+							radius = 0.520876
+							point0 = [ 24.2499, 0.014324, -2.65475 ]
+							point1 = [ 9.51375, -0.196442, -2.58619 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = ""
+							radius = 2.10675
+							point0 = [ -12.2282, 12.4721, 1.68003 ]
+							point1 = [ -16.2185, 0.073268, 2.10208 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = ""
+							radius = 2.10675
+							point0 = [ -15.8206, -0.892805, 2.12822 ]
+							point1 = [ -12.9602, -11.6713, 1.95071 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = ""
+							radius = 1.53131
+							point0 = [ -16.0075, -0.16663, 2.54987 ]
+							point1 = [ 5.66476, 0.345873, 2.28186 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = ""
+							radius = 1.09065
+							point0 = [ -3.8347, 0.116257, 5.42523 ]
+							point1 = [ 3.08725, 0.000076, 5.43346 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = ""
+							radius = 1.53131
+							point0 = [ -5.18969, -0.417081, 2.12275 ]
+							point1 = [ -9.81145, 0.243361, -8.16594 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = ""
+							radius = 0.689343
+							point0 = [ 21.8794, -0.212022, 3.29423 ]
+							point1 = [ 13.2862, 0.163204, -1.42887 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = ""
+							radius = 0.520876
+							point0 = [ 22.2757, -0.076794, -2.77881 ]
+							point1 = [ 21.8906, -0.290094, 3.15926 ]
+						}
+					},
+					{
+						_class = "GenericGameData"
+						game_class = "ao_proxy_capsule"
+						game_keys = 
+						{
+							bonename = ""
+							radius = 1.1132
+							point0 = [ 5.08631, -0.035502, 2.19971 ]
+							point1 = [ 11.977, -0.121891, -2.95646 ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "onside"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/hl1decomp/w_crossbow/w_crossbow_anims/onside.smd"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "idle"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/hl1decomp/w_crossbow/w_crossbow_anims/idle.smd"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}
