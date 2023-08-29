@@ -15,6 +15,7 @@ public class Crowbar : Melee
 	public override string CrosshairIcon => "/ui/crosshairs/crosshair0.png";
 	public override string InventoryIcon => "/ui/weapons/weapon_crowbar.png";
 	public override string InventoryIconSelected => "/ui/weapons/weapon_crowbar_selected.png";
+	public override CitizenAnimationHelper.HoldTypes HoldType => CitizenAnimationHelper.HoldTypes.Swing;
 
 
 	public override void PrimaryAttack()

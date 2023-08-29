@@ -23,6 +23,7 @@ public class MP5 : Gun
 	public override string CrosshairIcon => "/ui/crosshairs/crosshair8.png";
 	public override string InventoryIcon => "/ui/weapons/weapon_smg.png";
 	public override string InventoryIconSelected => "/ui/weapons/weapon_smg_selected.png";
+	public override CitizenAnimationHelper.HoldTypes HoldType => CitizenAnimationHelper.HoldTypes.Rifle;
 
 	public override void PrimaryAttack()
 	{

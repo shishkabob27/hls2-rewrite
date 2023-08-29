@@ -17,6 +17,7 @@ public class Carriable : AnimatedEntity
 	public virtual string ViewModelPath => null;
 	public BaseViewModel ViewModelEntity { get; protected set; }
 	public TimeSince TimeSinceDeployed { get; set; }
+	public virtual CitizenAnimationHelper.HoldTypes HoldType => CitizenAnimationHelper.HoldTypes.Pistol;
 
 	public override void Spawn()
 	{
@@ -119,7 +120,7 @@ public class Carriable : AnimatedEntity
 	}
 	public virtual void SimulateAnimator( CitizenAnimationHelper anim )
 	{
-		anim.HoldType = CitizenAnimationHelper.HoldTypes.Pistol;
+		anim.HoldType = HoldType;
 		anim.Handedness = CitizenAnimationHelper.Hand.Both;
 		anim.AimBodyWeight = 1.0f;
 	}

@@ -90,6 +90,26 @@
         "Addons": "",
         "PreLaunchCommand": "",
         "PostLaunchCommand": ""
+      },
+      {
+        "Name": "HLS2Test",
+        "GameIdent": "shishkabob.hls2-rewrite#local",
+        "MapName": "testmaps/hls2test/hls2test.vmap",
+        "MaxPlayers": 1,
+        "GameSettings": {},
+        "Addons": "",
+        "PreLaunchCommand": "",
+        "PostLaunchCommand": ""
+      },
+      {
+        "Name": "Black Mesa Inbound",
+        "GameIdent": "shishkabob.hls2-rewrite#local",
+        "MapName": "campaign/hls2_c1p0/hls2_c1p0.vmap",
+        "MaxPlayers": 1,
+        "GameSettings": {},
+        "Addons": "",
+        "PreLaunchCommand": "",
+        "PostLaunchCommand": ""
       }
     ]
   }

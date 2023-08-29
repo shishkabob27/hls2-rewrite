@@ -20,6 +20,7 @@ public class Shotgun : Gun
 	public override string AmmoIcon => "ui/ammo4.png";
 	public override string InventoryIcon => "/ui/weapons/weapon_shotgun.png";
 	public override string InventoryIconSelected => "/ui/weapons/weapon_shotgun_selected.png";
+	public override CitizenAnimationHelper.HoldTypes HoldType => CitizenAnimationHelper.HoldTypes.Shotgun;
 
 	public override void PrimaryAttack()
 	{
