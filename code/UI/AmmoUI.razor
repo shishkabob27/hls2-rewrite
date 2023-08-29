@@ -6,22 +6,35 @@
 
 <root class="bottom-right">  
 	
-	@if ((Game.LocalPawn is Player ply) && ply.Inventory.ActiveChild is Weapon wpn && wpn.PrimaryAmmoType != AmmoType.None ) {
+	@if ((Game.LocalPawn is Player ply) && ply.Inventory.ActiveChild is Weapon wpn && wpn.PrimaryAmmoType != AmmoType.None) {
 		<label class="ammocount">@wpn.PrimaryAmmo</label>
 
 		<IconPanel class="seperator"></IconPanel>
 		<label class="inventory">@ply.Ammo.AmmoCount(wpn.PrimaryAmmoType)</label>
-		<IconPanel class="ammoicon1"></IconPanel>
+		<IconPanel @ref=AmmoIcon1 class="ammoicon1"></IconPanel>
 
-		@if (wpn.SecondaryAmmoType != AmmoType.None) {
+		@if (wpn.SecondaryAmmoType != AmmoType.None && wpn.SecondaryAmmo > 0) {
 			<label class="altammocount">@wpn.SecondaryAmmo</label>
-            <IconPanel class="ammoicon2"></IconPanel>
-        }
+			<IconPanel @ref=AmmoIcon2 class="ammoicon2"></IconPanel>
+		}
 
 	}  
 </root> 
 
 @code {
+	public IconPanel AmmoIcon1;
+	public IconPanel AmmoIcon2;
+
+	public override void Tick()
+	{
+		if ((Game.LocalPawn is Player ply) && ply.Inventory.ActiveChild is Weapon wpn && wpn.PrimaryAmmoType != AmmoType.None)
+		{
+			AmmoIcon1.Style.BackgroundImage = Texture.Load(FileSystem.Mounted, wpn.AmmoIcon, true);
+			if (wpn.SecondaryAmmoType != AmmoType.None && wpn.SecondaryAmmo > 0)
+				AmmoIcon2.Style.BackgroundImage = Texture.Load(FileSystem.Mounted, wpn.AltAmmoIcon, true);
+		}
+	}
+
 	protected override int BuildHash()
 	{
 		var ammo1 = 0;
