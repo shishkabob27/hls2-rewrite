@@ -43,6 +43,10 @@ public partial class Weapon : Carriable
 			TimeSincePrimaryReload = 0;
 			ReloadPrimary();
 		}
+
+		if ( TimeSinceDeployed < 0.4f )
+			return;
+
 		if ( CanPrimaryAttack() && !IsPrimaryReloading )
 		{
 			TimeSincePrimaryAttack = 0;

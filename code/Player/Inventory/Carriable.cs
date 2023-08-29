@@ -16,6 +16,8 @@ public class Carriable : AnimatedEntity
 	public virtual string WorldModelPath => null;
 	public virtual string ViewModelPath => null;
 	public BaseViewModel ViewModelEntity { get; protected set; }
+	public TimeSince TimeSinceDeployed { get; set; }
+
 	public override void Spawn()
 	{
 		base.Spawn();
@@ -105,6 +107,7 @@ public class Carriable : AnimatedEntity
 			DestroyViewModel();
 			CreateViewModel();
 		}
+		TimeSinceDeployed = 0;
 	}
 	public virtual void OnActiveEnd()
 	{
