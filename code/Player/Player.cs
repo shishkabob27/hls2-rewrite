@@ -7,6 +7,7 @@ namespace HLS2;
 
 partial class Player : AnimatedEntity
 {
+	[Net] public bool HasHEV { get; set; } = false;
 	[Net] public float Suit { get; set; } = 0;
 	/// <summary>
 	/// Called when the entity is first created 

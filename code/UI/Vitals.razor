@@ -1,0 +1,22 @@
+﻿@using Sandbox;
+@using Sandbox.UI;
+@using Sandbox.UI.Construct; 
+@using System;
+@namespace HLS2
+@attribute [StyleSheet("/resource/hud.scss")]
+
+<root class="bottom-left">
+	@if (Game.LocalPawn.LifeState == LifeState.Alive && (Game.LocalPawn as Player).HasHEV)
+	{
+		<HealthUI></HealthUI>
+		<ArmorUI></ArmorUI>
+	}
+	
+</root>
+
+@code {
+	protected override int BuildHash()
+	{
+		return HashCode.Combine(Game.LocalPawn.LifeState, (Game.LocalPawn as Player).HasHEV);
+	}
+}

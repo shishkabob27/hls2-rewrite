@@ -1,0 +1,18 @@
+﻿@using Sandbox;
+@using Sandbox.UI;
+@using Sandbox.UI.Construct; 
+@using System;
+@namespace HLS2
+
+<root>
+	<IconPanel class="icon"></IconPanel>
+	@Game.LocalPawn.Health.CeilToInt().Clamp(0,255)
+	<IconPanel class="seperator"></IconPanel>
+</root>
+
+@code {
+	protected override int BuildHash()
+	{
+		return HashCode.Combine(Math.Round(Game.LocalPawn.Health));
+	}
+}

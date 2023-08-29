@@ -16,7 +16,7 @@ public class HUDRootPanel : RootPanel
 		Current = this;
 
 		AddChild<Crosshair>();
-		AddChild<Health>();
+		AddChild<Vitals>();
 		AddChild<AmmoUI>();
 	}
 }
