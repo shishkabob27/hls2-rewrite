@@ -135,14 +135,14 @@ public partial class ScriptedSequence : Entity
 		{
 			TargetNPC.NPCTaskQueue.Enqueue( new PlayAnimTask( EntryAnimation ) );
 		}
-		TargetNPC.NPCTaskQueue.Enqueue( new PlayAnimTask( ActionAnimation ) );
+		TargetNPC.NPCTaskQueue.Enqueue( new PlayAnimTask( ActionAnimation, EndSequence ) );
 
 		if ( LoopActionAnimation )
 		{
 			// Absolutely fucking flood the queue, TODO: Proper looping 
 			for ( var i = 0; i < 50; i++ )
 			{
-				TargetNPC.NPCTaskQueue.Enqueue( new PlayAnimTask( ActionAnimation ) );
+				TargetNPC.NPCTaskQueue.Enqueue( new PlayAnimTask( ActionAnimation, EndSequence ) );
 			}
 		}
 	}
