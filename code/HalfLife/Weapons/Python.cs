@@ -13,7 +13,7 @@ public class Python : Gun
 	public override float PrimaryAttackDelay => 0.7f;
 	public override float PrimaryReloadDelay => 2.5f;
 	public override int MaxPrimaryAmmo => 17;
-	public override AmmoType PrimaryAmmoType => AmmoType.Pistol;
+	public override AmmoType PrimaryAmmoType => AmmoType.Python;
 	public override bool Automatic => true;
 	public override void PrimaryAttack()
 	{
