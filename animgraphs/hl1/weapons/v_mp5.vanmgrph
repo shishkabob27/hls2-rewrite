@@ -284,7 +284,7 @@
 								m_id = 1361374698
 							}
 							m_position = [ -128.0, -160.0 ]
-							m_bIsStartState = true
+							m_bIsStartState = false
 							m_bIsEndtState = false
 							m_bIsPassthrough = false
 							m_bIsRootMotionExclusive = false
@@ -320,6 +320,9 @@
 									}
 									m_bForceFootPlant = false
 									m_bDisabled = false
+									m_bRandomTimeBetween = false
+									m_flRandomTimeStart = 0.0
+									m_flRandomTimeEnd = 0.0
 								},
 							]
 							m_tags = [  ]
@@ -377,6 +380,9 @@
 									}
 									m_bForceFootPlant = false
 									m_bDisabled = false
+									m_bRandomTimeBetween = false
+									m_flRandomTimeStart = 0.0
+									m_flRandomTimeEnd = 0.0
 								},
 							]
 							m_tags = [  ]
@@ -398,7 +404,7 @@
 								m_id = 1346017069
 							}
 							m_position = [ -368.0, -16.0 ]
-							m_bIsStartState = false
+							m_bIsStartState = true
 							m_bIsEndtState = false
 							m_bIsPassthrough = false
 							m_bIsRootMotionExclusive = false
@@ -434,6 +440,9 @@
 									}
 									m_bForceFootPlant = false
 									m_bDisabled = false
+									m_bRandomTimeBetween = false
+									m_flRandomTimeStart = 0.0
+									m_flRandomTimeEnd = 0.0
 								},
 							]
 							m_tags = [  ]
@@ -491,6 +500,9 @@
 									}
 									m_bForceFootPlant = false
 									m_bDisabled = false
+									m_bRandomTimeBetween = false
+									m_flRandomTimeStart = 0.0
+									m_flRandomTimeEnd = 0.0
 								},
 							]
 							m_tags = [  ]
@@ -555,6 +567,9 @@
 									}
 									m_bForceFootPlant = false
 									m_bDisabled = false
+									m_bRandomTimeBetween = false
+									m_flRandomTimeStart = 0.0
+									m_flRandomTimeEnd = 0.0
 								},
 								{
 									_class = "CAnimStateTransition"
@@ -589,6 +604,9 @@
 									}
 									m_bForceFootPlant = false
 									m_bDisabled = false
+									m_bRandomTimeBetween = false
+									m_flRandomTimeStart = 0.0
+									m_flRandomTimeEnd = 0.0
 								},
 								{
 									_class = "CAnimStateTransition"
@@ -623,6 +641,9 @@
 									}
 									m_bForceFootPlant = false
 									m_bDisabled = false
+									m_bRandomTimeBetween = false
+									m_flRandomTimeStart = 0.0
+									m_flRandomTimeEnd = 0.0
 								},
 								{
 									_class = "CAnimStateTransition"
@@ -657,6 +678,9 @@
 									}
 									m_bForceFootPlant = false
 									m_bDisabled = false
+									m_bRandomTimeBetween = false
+									m_flRandomTimeStart = 0.0
+									m_flRandomTimeEnd = 0.0
 								},
 							]
 							m_tags = [  ]
@@ -821,4 +845,11 @@
 		"models/hl1/weapons/view/v_mp5.vmdl",
 	]
 	m_boneMergeModels = [  ]
+	m_cameraSettings = 
+	{
+		m_flFov = 60.0
+		m_sLockBoneName = "bone03"
+		m_bLockCamera = false
+		m_bViewModelCamera = false
+	}
 }
