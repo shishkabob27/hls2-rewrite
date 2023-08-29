@@ -19,7 +19,7 @@ public class MP5 : Gun
 	{
 		PrimaryAmmo -= 1;
 		ShootBullet( 8, 0.05f );
-		PlaySound( "hks" );
+		PlaySound( "sounds/hl1/weapons/hks.sound" );
 		(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 		if ( Game.IsClient )
 		{
