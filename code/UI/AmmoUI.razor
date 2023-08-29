@@ -3,25 +3,22 @@
 @using Sandbox.UI.Construct; 
 @using System;
 @namespace HLS2
-<style>
-	.ammo {
-		position:absolute;
-		bottom:32px;
-		right:32px;
-		gap:16px;
-	} 
-	.number {
-		font-size: 64px;
-		background-color: black;
-		color: white;
-	}
-</style>
+@attribute [StyleSheet("/resource/hud.scss")]
 
-<root class="ammo">  
+<root class="bottom-right">  
 	
-	@if ((Game.LocalPawn is Player ply) && ply.Inventory.ActiveChild is Weapon wpn ) {
-		<div class="number">@wpn.PrimaryAmmo</div>
-		<div class="number">@ply.Ammo.AmmoCount(wpn.PrimaryAmmoType)</div> 
+	@if ((Game.LocalPawn is Player ply) && ply.Inventory.ActiveChild is Weapon wpn && wpn.PrimaryAmmoType != AmmoType.None ) {
+		<label class="ammocount">@wpn.PrimaryAmmo</label>
+
+		<IconPanel class="seperator"></IconPanel>
+		<label class="inventory">@ply.Ammo.AmmoCount(wpn.PrimaryAmmoType)</label>
+		<IconPanel class="ammoicon1"></IconPanel>
+
+		@if (wpn.SecondaryAmmoType != AmmoType.None) {
+			<label class="altammocount">@wpn.SecondaryAmmo</label>
+            <IconPanel class="ammoicon2"></IconPanel>
+        }
+
 	}  
 </root> 
 
