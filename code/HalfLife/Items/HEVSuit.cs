@@ -3,7 +3,7 @@ using Sandbox;
 
 namespace HLS2;
 
-[Library( "item_suit" )]
+[Library( "hev_suit" )]
 [HammerEntity]
 [Model( Model = "models/hl1/items/suit.vmdl" )]
 [Title( "Hev Suit" ), Category( "items" ), Icon( "theater_comedy" )]
@@ -16,8 +16,9 @@ public partial class HevSuit : ModelEntity
 	[Property, ResourceType( "sound" )]
 	[Net]
 	public string PickupSound { get; set; } = "sounds/hl1/fvox/bell.sound";
-	public override void Touch( Entity other )
+	public override void StartTouch( Entity other )
 	{
+		Log.Error( "touch" );
 		base.Touch( other );
 		if (other is Player player)
 		{
@@ -31,7 +32,8 @@ public partial class HevSuit : ModelEntity
 	public override void Spawn()
 	{
 		base.Spawn();
-		EnableTouch = true;
+		SetupPhysicsFromModel( PhysicsMotionType.Static );
+		
 	}
 
 }
