@@ -42,5 +42,6 @@ public class Scientist : NPC
 		WishSpeed = 70;
 		TryNavigate();
 		TryMove();
+		TryAnimate();
 	}
 }

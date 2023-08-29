@@ -23,5 +23,6 @@ public class Barney : NPC
 		WishSpeed = 70;
 		TryNavigate();
 		TryMove();
+		TryAnimate();
 	}
 }
