@@ -186,7 +186,7 @@ partial class Player : AnimatedEntity
 				Inventory.DropItem( item );
 			}
 			Inventory.Items.Clear();
-			Components.Add( new NoclipController() );
+			Components.Add( new DeadCamera() );
 		}
 		Event.Run( "Player.PostOnKilled", this );
 	}

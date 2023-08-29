@@ -113,7 +113,10 @@ public partial class WalkController : MovementComponent
 	{
 
 		var pl = Entity as Player;
-		pl.InputDirection = Input.AnalogMove;
+
+		pl.InputDirection = Vector3.Zero;
+		if ( pl.LifeState != LifeState.Dead )
+			pl.InputDirection = Input.AnalogMove;
 	}
 	public override void Simulate( IClient cl )
 	{
@@ -183,7 +186,7 @@ public partial class WalkController : MovementComponent
 			WaterSimulate();
 		}
 		else
-		if ( AutoJump ? Input.Down( "Jump" ) : Input.Pressed( "Jump" ) )
+		if ( AutoJump ? Input.Down( "Jump" ) : Input.Pressed( "Jump" ) && pl.LifeState == LifeState.Alive)
 		{
 			CheckJumpButton();
 		}
@@ -464,7 +467,7 @@ public partial class WalkController : MovementComponent
 	public virtual void CheckDuck()
 	{
 		var pl = Entity as Player;
-		bool wants = Input.Down( "Duck" );
+		bool wants = Input.Down( "Duck" ) && pl.LifeState == LifeState.Alive;
 
 		if ( wants != IsDucking )
 		{
