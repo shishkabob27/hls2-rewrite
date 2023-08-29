@@ -2,6 +2,8 @@
 $yellow: #ff0;
 $orange: #ffd300;
 
+@import "/resource/_inventory.scss";
+
 HudRootPanel {
     pointer-events: none;
     background-color: rgba( #333, 0 );

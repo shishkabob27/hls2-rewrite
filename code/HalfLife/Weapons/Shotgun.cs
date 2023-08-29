@@ -14,6 +14,13 @@ public class Shotgun : Gun
 	public override int MaxPrimaryAmmo => 8;
 	public override AmmoType PrimaryAmmoType => AmmoType.Buckshot;
 	public override bool Automatic => true;
+	public override int Bucket => 2;
+	public override int BucketWeight => 2;
+	public override string CrosshairIcon => "/ui/crosshairs/crosshair6.png";
+	public override string AmmoIcon => "ui/ammo4.png";
+	public override string InventoryIcon => "/ui/weapons/weapon_shotgun.png";
+	public override string InventoryIconSelected => "/ui/weapons/weapon_shotgun_selected.png";
+
 	public override void PrimaryAttack()
 	{
 		PrimaryAmmo -= 1;

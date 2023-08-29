@@ -16,6 +16,14 @@ public partial class Weapon : Carriable
 	public virtual bool Automatic => false;
 	[Net] public int PrimaryAmmo { get; set; } = 0;
 	[Net] public int SecondaryAmmo { get; set; } = 0;
+	public virtual int Bucket => 0;
+	public virtual int BucketWeight => 1;
+	public virtual int Order => (Bucket * 10000) + BucketWeight;
+	public virtual string CrosshairIcon => "/ui/crosshairs/crosshair2.png";
+	public virtual string AmmoIcon => "ui/ammo1.png";
+	public virtual string AltAmmoIcon => "ui/ammo3.png";
+	public virtual string InventoryIcon => "/ui/weapons/weapon_error.png";
+	public virtual string InventoryIconSelected => "/ui/weapons/weapon_error_selected.png";
 	bool IsPrimaryReloading => TimeSincePrimaryReload < PrimaryReloadDelay;
 	bool IsSecondaryReloading => TimeSinceSecondaryReload < SecondaryReloadDelay;
 	public override void Spawn()
@@ -114,5 +122,12 @@ public partial class Weapon : Carriable
 	public virtual bool CanSecondaryAttack()
 	{
 		return (Automatic ? Input.Down( "Attack2" ) : Input.Pressed( "Attack2" )) && TimeSinceSecondaryAttack >= SecondaryAttackDelay;
+	}
+	public virtual bool IsUsable()
+	{
+		if ( PrimaryAmmo > 0 ) return true;
+		if ( PrimaryAmmoType == AmmoType.None ) return true;
+		if ( Owner as Player == null ) return false;
+		return (Owner as Player).Ammo.AmmoCount( PrimaryAmmoType ) > 0;
 	}
 }

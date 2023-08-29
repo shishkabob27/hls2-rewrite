@@ -12,6 +12,10 @@ public class Crowbar : Melee
 	public override float PrimaryAttackDelay => 0.22f;
 	public override AmmoType PrimaryAmmoType => AmmoType.None;
 	public override bool Automatic => true;
+	public override string CrosshairIcon => "/ui/crosshairs/crosshair0.png";
+	public override string InventoryIcon => "/ui/weapons/weapon_crowbar.png";
+	public override string InventoryIconSelected => "/ui/weapons/weapon_crowbar_selected.png";
+
 
 	public override void PrimaryAttack()
 	{

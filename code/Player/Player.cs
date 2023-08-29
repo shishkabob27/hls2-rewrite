@@ -228,17 +228,6 @@ partial class Player : AnimatedEntity
 				Components.Add( new FirstPersonCamera() );
 			}
 		}
-		if ( Game.IsClient )
-		{
-			if ( Input.MouseWheel > 0.1 )
-			{
-				Inventory?.SwitchActiveSlot( 1, true );
-			}
-			if ( Input.MouseWheel < -0.1 )
-			{
-				Inventory?.SwitchActiveSlot( -1, true );
-			}
-		}
 		// these are to be done in order and before the simulated components
 		UnstuckController?.Simulate( cl );
 		MovementController?.Simulate( cl );

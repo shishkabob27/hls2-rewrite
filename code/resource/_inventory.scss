@@ -1,0 +1,192 @@
+﻿inventorybar
+{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	font-family: Trebuchet MS;
+	opacity: 0;
+	mix-blend-mode: lighten;
+
+	&.active
+	{
+		//top: 16px;
+		opacity: 1;
+	}
+}
+
+inventorycolumn {
+	margin-right: 5px;
+	color: #fc0;
+	flex-direction: column;
+	align-items: flex-start; // align to the left, don't stretch
+
+	.slot-number {
+		overflow: hidden;
+		text-align: right;
+		white-space: nowrap;
+		background-tint: rgba(255, 220, 0);
+		background-size: cover;
+		background-repeat: no-repeat;
+		opacity: 1;
+		mix-blend-mode: lighten;
+		background-color: rgba(255, 189, 0, 0.05);
+		padding: 8px 0px 0px 14px;
+		font-size: 9px;
+		font-family: Tahoma;
+		font-weight: normal;
+		font-style: normal;
+		width: 20px;
+		height: 20px;
+	}
+
+	inventoryicon {
+		opacity: 1;
+		padding: 15px 15px 10px 2px;
+		padding-bottom: 0px;
+		width: 20px;
+		height: 20px;
+		overflow: hidden;
+		white-space: nowrap;
+
+		.icon {
+			opacity: 0;
+		}
+	}
+
+	opacity: 1;
+
+	&.invisible {
+		opacity: 0;
+	}
+
+	&.active {
+		.ammocountf {
+			opacity: 0.8;
+		}
+
+		.ammocounte {
+			opacity: 1;
+		}
+
+		opacity: 1;
+
+		inventoryicon {
+			opacity: 1;
+			display: flex;
+			width: 170px;
+			height: 45px;
+			background-color: rgba(255,170,2,0.01);
+
+			.icon {
+				opacity: 1;
+			}
+
+			&.active {
+				background-color: rgba(255,170,2,0.024);
+				opacity: 1;
+			}
+
+			&.empty {
+				.ammocountf {
+					opacity: 0;
+				}
+
+				.ammocounte {
+					opacity: 0;
+				}
+
+				opacity: 0.5;
+				background-color: rgba(204,0,68,0.03);
+				color: #f002;
+
+				.icon {
+					background-color: rgba(255,85,0,0.01);
+					background-image-tint: #f50;
+				}
+			}
+		}
+	}
+}
+
+inventoryicon {
+	margin-bottom: 5px;
+	mix-blend-mode: lighten;
+	color: #fc0;
+	background-color: rgba(255, 162, 0, 0.32);
+	font-size: 40px;
+	font-weight: lighter;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+
+	.icon {
+		width: 170px;
+		height: 45px;
+		background-size: 100%;
+		background-image-tint: #ffd300;
+		position: absolute;
+	}
+
+
+	.ammocountf {
+		background-color: #00FF00;
+		height: 4px;
+		top: -28px;
+		left: -59px;
+		opacity: 0;
+
+		&.alt {
+			margin-left: -20px;
+			left: -34px;
+		}
+	}
+
+	.ammocounte {
+		background-color: #fa02;
+		height: 4px;
+		top: -28px;
+		left: -59px;
+		opacity: 0;
+
+		&.alt {
+			left: -34px;
+		}
+	}
+
+	&.active {
+		opacity: 1;
+		background-image: url("/ui/weapons/weapon_selected_overlay.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image-tint: #ffd919;
+
+		.icon {
+			//filter: drop-shadow additive glow
+			opacity: 1;
+		}
+	}
+
+	&.empty {
+		opacity: 0.5;
+		background-color: #c004;
+		color: #f002;
+
+		.icon {
+			background-color: #f50;
+		}
+	}
+
+	&.invisible {
+
+		.ammocountf {
+			opacity: 0;
+		}
+
+		.ammocounte {
+			opacity: 0;
+		}
+
+		opacity: 0;
+	}
+}
+

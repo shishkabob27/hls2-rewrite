@@ -2,7 +2,7 @@
 using Sandbox.UI;
 
 namespace HLS2;
-public class HUDEntity : HudEntity<HUDRootPanel>
+public class HUDEntity : HudEntity<HUD>
 {
 	public static HUDEntity Current;
 
@@ -12,8 +12,7 @@ public class HUDEntity : HudEntity<HUDRootPanel>
 		
 		if ( Game.IsClient )
 		{
-			StyleSheet.FromFile( "/resource/hud.scss" );
-			Log.Info( StyleSheet.Loaded );
+
 		}
 	}
 }

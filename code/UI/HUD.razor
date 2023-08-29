@@ -1,0 +1,32 @@
+﻿@using Sandbox;
+@using Sandbox.UI;
+
+@namespace HLS2
+@inherits RootPanel
+@attribute [StyleSheet]
+
+
+<root>
+    <ChatBox/>
+    <VoiceList/>
+
+    <Vitals/>
+	<Crosshair/>
+	<AmmoUI/>
+	<InventoryBar/>
+</root>
+
+@code{
+public static HUD Current;
+
+	public HUD()
+	{
+
+		if ( Current != null )
+		{
+			Current.Delete();
+			Current = this;
+		}
+		Current = this;
+	}
+}

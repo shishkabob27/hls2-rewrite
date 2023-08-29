@@ -15,10 +15,16 @@ public class MP5 : Gun
 	public override int MaxPrimaryAmmo => 50;
 	public override AmmoType PrimaryAmmoType => AmmoType.Pistol;
 	public override bool Automatic => true;
+	public override int Bucket => 2;
+	public override int BucketWeight => 1;
+	public override string CrosshairIcon => "/ui/crosshairs/crosshair8.png";
+	public override string InventoryIcon => "/ui/weapons/weapon_smg.png";
+	public override string InventoryIconSelected => "/ui/weapons/weapon_smg_selected.png";
+
 	public override void PrimaryAttack()
 	{
 		PrimaryAmmo -= 1;
-		ShootBullet( 8, 0.05f );
+		ShootBullet( 5, 0.05f );
 		PlaySound( "sounds/hl1/weapons/hks.sound" );
 		(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 		if ( Game.IsClient )

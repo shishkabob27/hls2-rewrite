@@ -15,6 +15,12 @@ public class Pistol : Gun
 	public override int MaxPrimaryAmmo => 17;
 	public override AmmoType PrimaryAmmoType => AmmoType.Pistol;
 	public override bool Automatic => true;
+	public override int Bucket => 1;
+	public override int BucketWeight => 1;
+	public override string CrosshairIcon => "/ui/crosshairs/crosshair2.png";
+	public override string InventoryIcon => "/ui/weapons/weapon_pistol.png";
+	public override string InventoryIconSelected => "/ui/weapons/weapon_pistol_selected.png";
+
 	public override void PrimaryAttack()
 	{
 		PrimaryAmmo -= 1;

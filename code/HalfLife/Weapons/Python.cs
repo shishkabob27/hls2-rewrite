@@ -15,6 +15,13 @@ public class Python : Gun
 	public override int MaxPrimaryAmmo => 6;
 	public override AmmoType PrimaryAmmoType => AmmoType.Python;
 	public override bool Automatic => true;
+	public override int Bucket => 1;
+	public override int BucketWeight => 2;
+	public override string CrosshairIcon => "/ui/crosshairs/crosshair3.png";
+	public override string AmmoIcon => "ui/ammo2.png";
+	public override string InventoryIcon => "/ui/weapons/weapon_357.png";
+	public override string InventoryIconSelected => "/ui/weapons/weapon_357_selected.png";
+
 	public override void PrimaryAttack()
 	{
 		PrimaryAmmo -= 1;
