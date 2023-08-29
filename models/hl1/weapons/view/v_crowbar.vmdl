@@ -86,6 +86,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/hl1decomp/v_crowbar/v_crowbar_anims/attack1.smd"
 						start_frame = -1
 						end_frame = -1
@@ -107,6 +108,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/hl1decomp/v_crowbar/v_crowbar_anims/attack1.smd"
 						start_frame = -1
 						end_frame = -1
@@ -128,6 +130,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/hl1decomp/v_crowbar/v_crowbar_anims/attack1miss.smd"
 						start_frame = -1
 						end_frame = -1
@@ -149,6 +152,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/hl1decomp/v_crowbar/v_crowbar_anims/attack2.smd"
 						start_frame = -1
 						end_frame = -1
@@ -170,6 +174,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/hl1decomp/v_crowbar/v_crowbar_anims/attack2hit.smd"
 						start_frame = -1
 						end_frame = -1
@@ -191,6 +196,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/hl1decomp/v_crowbar/v_crowbar_anims/attack3.smd"
 						start_frame = -1
 						end_frame = -1
@@ -212,6 +218,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/hl1decomp/v_crowbar/v_crowbar_anims/attack3hit.smd"
 						start_frame = -1
 						end_frame = -1
@@ -233,6 +240,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/hl1decomp/v_crowbar/v_crowbar_anims/draw.smd"
 						start_frame = -1
 						end_frame = -1
@@ -254,6 +262,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/hl1decomp/v_crowbar/v_crowbar_anims/holster.smd"
 						start_frame = -1
 						end_frame = -1
@@ -275,6 +284,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/hl1decomp/v_crowbar/v_crowbar_anims/idle1.smd"
 						start_frame = -1
 						end_frame = -1
@@ -296,6 +306,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/hl1decomp/v_crowbar/v_crowbar_anims/idle2.smd"
 						start_frame = -1
 						end_frame = -1
@@ -317,6 +328,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						enable_scale = false
 						source_filename = "models/hl1decomp/v_crowbar/v_crowbar_anims/idle3.smd"
 						start_frame = -1
 						end_frame = -1
@@ -380,7 +392,7 @@
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
-		anim_graph_name = "animgraphs/hl1/weapons/crowbar.vanmgrph"
+		anim_graph_name = "animgraphs/hl1/weapons/v_crowbar.vanmgrph"
 		base_model_name = ""
 	}
 }
