@@ -84,7 +84,7 @@
       {
         "Name": "Anomalous Materials",
         "GameIdent": "shishkabob.hls2-rewrite#local",
-        "MapName": "campiagn/hls2_c2p0/hls2_c2p0.vmap",
+        "MapName": "campaign/hls2_c2p0/hls2_c2p0.vmap",
         "MaxPlayers": 1,
         "GameSettings": {},
         "Addons": "",
