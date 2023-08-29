@@ -11,6 +11,11 @@
 </root>
 
 @code {
+	public override void Tick()
+	{
+		this.Style.Width = 1049 + (Screen.Height / Screen.Width) * -1250;
+	}
+
 	protected override int BuildHash()
 	{
 		return HashCode.Combine(Math.Round(Game.LocalPawn.Health));
