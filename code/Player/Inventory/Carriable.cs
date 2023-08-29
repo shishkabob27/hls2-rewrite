@@ -15,6 +15,7 @@ public class Carriable : AnimatedEntity
 	public Entity Carrier { get; set; }
 	public virtual string WorldModelPath => null;
 	public virtual string ViewModelPath => null;
+	public virtual string WorldPlayerModelPath => null;
 	public BaseViewModel ViewModelEntity { get; protected set; }
 	public TimeSince TimeSinceDeployed { get; set; }
 	public virtual CitizenAnimationHelper.HoldTypes HoldType => CitizenAnimationHelper.HoldTypes.Pistol;
@@ -99,6 +100,7 @@ public class Carriable : AnimatedEntity
 		EnableDrawing = true;
 		EnableHideInFirstPerson = false;
 		EnableShadowInFirstPerson = false;
+		if ( WorldPlayerModelPath != null ) SetModel( WorldModelPath );
 	}
 	public virtual void OnActiveStart()
 	{
@@ -109,6 +111,8 @@ public class Carriable : AnimatedEntity
 			CreateViewModel();
 		}
 		TimeSinceDeployed = 0;
+
+		if (WorldPlayerModelPath != null) SetModel( WorldPlayerModelPath );
 	}
 	public virtual void OnActiveEnd()
 	{

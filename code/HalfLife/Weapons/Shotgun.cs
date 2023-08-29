@@ -9,6 +9,7 @@ public class Shotgun : Gun
 {
 	public override string ViewModelPath => "models/hl1/weapons/view/v_shotgun.vmdl";
 	public override string WorldModelPath => "models/hl1/weapons/world/shotgun.vmdl";
+	public override string WorldPlayerModelPath => "models/hl1/weapons/player/p_shotgun.vmdl";
 	public override float PrimaryAttackDelay => 0.6f;
 	public override float PrimaryReloadDelay => 1f;
 	public override int MaxPrimaryAmmo => 8;

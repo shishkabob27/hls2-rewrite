@@ -9,6 +9,7 @@ public class Crowbar : Melee
 {
 	public override string ViewModelPath => "models/hl1/weapons/view/v_crowbar.vmdl";
 	public override string WorldModelPath => "models/hl1/weapons/world/crowbar.vmdl";
+	public override string WorldPlayerModelPath => "models/hl1/weapons/player/p_crowbar.vmdl";
 	public override float PrimaryAttackDelay => 0.22f;
 	public override AmmoType PrimaryAmmoType => AmmoType.None;
 	public override bool Automatic => true;

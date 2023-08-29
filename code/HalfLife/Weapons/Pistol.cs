@@ -10,6 +10,7 @@ public class Pistol : Gun
 {
 	public override string ViewModelPath => "models/hl1/weapons/view/v_glock.vmdl";
 	public override string WorldModelPath => "models/hl1/weapons/world/glock.vmdl";
+	public override string WorldPlayerModelPath => "models/hl1/weapons/player/p_glock.vmdl";
 	public override float PrimaryAttackDelay => 0.31f;
 	public override float PrimaryReloadDelay => 1.4f;
 	public override int MaxPrimaryAmmo => 17;

@@ -10,6 +10,7 @@ public class Python : Gun
 {
 	public override string ViewModelPath => "models/hl1/weapons/view/v_python.vmdl";
 	public override string WorldModelPath => "models/hl1/weapons/world/python.vmdl";
+	public override string WorldPlayerModelPath => "models/hl1/weapons/player/p_python.vmdl";
 	public override float PrimaryAttackDelay => 0.7f;
 	public override float PrimaryReloadDelay => 2.5f;
 	public override int MaxPrimaryAmmo => 6;

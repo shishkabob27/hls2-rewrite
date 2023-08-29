@@ -10,6 +10,7 @@ public class MP5 : Gun
 {
 	public override string ViewModelPath => "models/hl1/weapons/view/v_mp5.vmdl";
 	public override string WorldModelPath => "models/hl1/weapons/world/mp5.vmdl";
+	public override string WorldPlayerModelPath => "models/hl1/weapons/player/p_mp5.vmdl";
 	public override float PrimaryAttackDelay => 0.1f;
 	public override float PrimaryReloadDelay => 1.4f;
 	public override float SecondaryAttackDelay => 0.7f;
