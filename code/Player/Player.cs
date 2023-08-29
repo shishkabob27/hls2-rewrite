@@ -173,7 +173,7 @@ partial class Player : AnimatedEntity
 		Event.Run( "Player.PreOnKilled", this );
 		LifeState = LifeState.Dead;
 		BecomeRagdoll( LastDamage );
-
+		timeSinceDied = 0;
 		Inventory.ActiveChild = null;
 		Inventory.ActiveChildInput = null;
 		if ( Game.IsServer )
@@ -210,12 +210,20 @@ partial class Player : AnimatedEntity
 		}
 	}
 
+	public TimeSince timeSinceDied { get; set; }
+
 	/// <summary>
 	/// Called every tick, clientside and serverside.
 	/// </summary>
 	public override void Simulate( IClient cl )
 	{
 		base.Simulate( cl );
+
+		if ( LifeState == LifeState.Dead && timeSinceDied > 2 && Game.IsServer )
+		{
+			Respawn();
+		}
+
 		// toggleable third person
 		if ( Input.Pressed( "View" ) && Game.IsServer )
 		{
