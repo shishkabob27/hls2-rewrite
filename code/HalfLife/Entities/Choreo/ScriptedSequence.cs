@@ -260,7 +260,7 @@ public partial class ScriptedSequence : Entity
 
 	public void MoveTo( MoveToMode moveMode )
 	{
-		EnsureTargetNPC();
+		if (TargetNPC == null) EnsureTargetNPC();
 		DebugPrint( "Move to position started." );
 		switch ( moveMode )
 		{
