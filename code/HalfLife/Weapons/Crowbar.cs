@@ -38,7 +38,7 @@ public class Crowbar : Melee
 		{
 			PlaySound( "cbar_miss" );
 		}
-			
+		ViewModelEntity?.SetAnimParameter( "attack_has_hit", hit );
 		ViewModelEntity?.SetAnimParameter( "fire", true );
 		(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 

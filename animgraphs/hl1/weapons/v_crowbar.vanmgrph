@@ -140,7 +140,7 @@
 						},
 					]
 					m_seed = 215840879
-					m_choiceMethod = "IterateRandom"
+					m_choiceMethod = "Iterate"
 					m_choiceChangeMethod = "OnReset"
 					m_blendMethod = "SingleBlendTime"
 					m_blendTime = 0.2
@@ -158,7 +158,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -416.0, 48.0 ]
+					m_vecPosition = [ -592.0, 32.0 ]
 					m_nNodeID = 
 					{
 						m_id = 436675243
@@ -194,22 +194,6 @@
 							{
 								m_nodeID = 
 								{
-									m_id = 436675243
-								}
-								m_outputID = 
-								{
-									m_id = 4294967295
-								}
-							}
-							m_name = ""
-							m_weight = 0.0
-							m_blendTime = 0.2
-						},
-						{
-							m_inputConnection = 
-							{
-								m_nodeID = 
-								{
 									m_id = 1229061874
 								}
 								m_outputID = 
@@ -239,7 +223,7 @@
 						},
 					]
 					m_seed = 215840879
-					m_choiceMethod = "IterateRandom"
+					m_choiceMethod = "Iterate"
 					m_choiceChangeMethod = "OnReset"
 					m_blendMethod = "SingleBlendTime"
 					m_blendTime = 0.2
@@ -569,7 +553,7 @@
 							{
 								m_nodeID = 
 								{
-									m_id = 447327432
+									m_id = 1003215719
 								}
 								m_outputID = 
 								{
@@ -927,7 +911,7 @@
 					m_networkMode = "ClientSimulate"
 					m_sNote = ""
 					m_tagSpans = [  ]
-					m_sequenceName = "attack2"
+					m_sequenceName = "attack4"
 					m_playbackSpeed = 1.0
 					m_bLoop = false
 				}
