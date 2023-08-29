@@ -19,9 +19,26 @@ public class Crowbar : Melee
 
 	public override void PrimaryAttack()
 	{
-		PlaySound( "cbar_miss" );
-		Attack(10);
-		PlaySound( "cbar_hit" );
+		
+		Attack(out bool hit, out Surface surface, 10);
+		if ( hit )
+		{
+			switch (surface.ResourceName)
+			{
+				case "flesh":
+					PlaySound( "cbar_hitbod" );
+					break;
+				default:
+					PlaySound( "cbar_hit" );
+					break;
+
+			}
+		}
+		else
+		{
+			PlaySound( "cbar_miss" );
+		}
+			
 		ViewModelEntity?.SetAnimParameter( "fire", true );
 		(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 
