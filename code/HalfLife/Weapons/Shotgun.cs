@@ -17,7 +17,7 @@ public class Shotgun : Gun
 	public override void PrimaryAttack()
 	{
 		PrimaryAmmo -= 1;
-		ShootBullet( 8, 0.05f );
+		ShootBullet( 5, 0.1f, 0, 6 );
 		PlaySound( "shotgun_shot" );
 		(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 		if ( Game.IsClient )

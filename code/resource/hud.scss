@@ -100,31 +100,31 @@ iconpanel {
 }
 
 .bottom-right {
+    align-items: center;
+    text-align: left;
+    flex-direction: row;
+    mix-blend-mode: lighten;
+    font-family: "Trebuchet MS";
 
-        align-items: center;
-        text-align: left;
-        flex-direction: row;
-        mix-blend-mode: lighten;
-        font-family: "Trebuchet MS";
 
+    label {
+        opacity: 0.35;
+        text-align: right;
+        letter-spacing: 3px;
 
-        label {
-            opacity: 0.35;
-            text-align: right;
-            letter-spacing: 3px;
-
-            &.danger {
-                color: #f00;
-            }
+        &.danger {
+            color: #f00;
         }
+    }
 
-        .seperator {
-            right: 0px;
+    .seperator {
+        right: 0px;
+        opacity: 0.35;
 
-            &.invisible {
-                display: none;
-            }
+        &.invisible {
+            display: none;
         }
+    }
     
 }
 
