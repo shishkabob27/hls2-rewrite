@@ -26,10 +26,14 @@
 	{
 		var ammo1 = 0;
 		var ammo1stash = 0;
+		var ammo2 = 0;
+		var ammo2stash = 0;
 		if ((Game.LocalPawn is Player ply) && ply.Inventory.ActiveChild is Weapon wpn ) {
 			ammo1 = wpn.PrimaryAmmo;
 			ammo1stash = ply.Ammo.AmmoCount(wpn.PrimaryAmmoType);
+			ammo2 = wpn.SecondaryAmmo;
+			ammo2stash = ply.Ammo.AmmoCount(wpn.SecondaryAmmoType);
 		}
-		return HashCode.Combine((Game.LocalPawn as Player).Inventory.ActiveChild, ammo1, ammo1stash);
+		return HashCode.Combine((Game.LocalPawn as Player).Inventory.ActiveChild, ammo1, ammo1stash, ammo2, ammo2stash);
 	}
 }
