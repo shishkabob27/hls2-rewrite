@@ -12,6 +12,9 @@ public class Shotgun : Gun
 	public override string WorldPlayerModelPath => "models/hl1/weapons/player/p_shotgun.vmdl";
 	public override float PrimaryAttackDelay => 0.6f;
 	public override float PrimaryReloadDelay => 1f;
+	public override float SecondaryAttackDelay => 0.6f;
+	public override float SecondaryReloadDelay => 1f;
+
 	public override int MaxPrimaryAmmo => 8;
 	public override AmmoType PrimaryAmmoType => AmmoType.Buckshot;
 	public override bool Automatic => true;
@@ -39,5 +42,28 @@ public class Shotgun : Gun
 	{
 		base.ReloadPrimary();
 		ViewModelEntity?.SetAnimParameter( "reload", true );
+	}
+
+	public override void SecondaryAttack()
+	{
+		if ( PrimaryAmmo > 0 || MaxPrimaryAmmo == 0 )
+		{
+			if ( PrimaryAmmo > 1 )
+			{
+				PrimaryAmmo -= 2;
+				ShootBullet( 10, 0.1f, 0, 6 );
+				PlaySound( "shotgun_shot" );
+				(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
+				if ( Game.IsClient )
+				{
+					ShootEffects();
+					DoViewPunch( 10f );
+				}
+			} 
+			else
+			{
+				PrimaryAttack();
+			}
+		}
 	}
 }
