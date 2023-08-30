@@ -32,6 +32,7 @@ public partial class HevSuit : ModelEntity
 	public override void Spawn()
 	{
 		base.Spawn();
+		Tags.Add( "weapon" );
 		SetupPhysicsFromModel( PhysicsMotionType.Static );
 		
 	}
