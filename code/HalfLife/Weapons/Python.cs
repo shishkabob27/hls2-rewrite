@@ -32,7 +32,7 @@ public class Python : Gun
 		if ( Game.IsClient )
 		{
 			ShootEffects();
-			DoViewPunch( 1f );
+			DoViewPunch( 6f );
 		}
 	}
 	public override void ReloadPrimary()
