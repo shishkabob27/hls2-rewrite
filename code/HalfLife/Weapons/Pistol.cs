@@ -13,6 +13,7 @@ public class Pistol : Gun
 	public override string WorldPlayerModelPath => "models/hl1/weapons/player/p_glock.vmdl";
 	public override float PrimaryAttackDelay => 0.31f;
 	public override float PrimaryReloadDelay => 1.4f;
+	public override float SecondaryAttackDelay => 0.2f;
 	public override int MaxPrimaryAmmo => 17;
 	public override AmmoType PrimaryAmmoType => AmmoType.Pistol;
 	public override bool Automatic => true;
@@ -38,5 +39,21 @@ public class Pistol : Gun
 	{
 		base.ReloadPrimary();
 		ViewModelEntity?.SetAnimParameter( "reload", true );
+	}
+
+	public override void SecondaryAttack()
+	{
+		if ( PrimaryAmmo > 0 || MaxPrimaryAmmo == 0 )
+		{
+			PrimaryAmmo -= 1;
+			ShootBullet( 8, 0.1f );
+			PlaySound( "pistol_shot" );
+			(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
+			if ( Game.IsClient )
+			{
+				ShootEffects();
+				DoViewPunch( 2f );
+			}
+		}
 	}
 }
