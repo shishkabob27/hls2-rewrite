@@ -12,7 +12,7 @@ public class Shotgun : Gun
 	public override string WorldPlayerModelPath => "models/hl1/weapons/player/p_shotgun.vmdl";
 	public override float PrimaryAttackDelay => 0.6f;
 	public override float PrimaryReloadDelay => 1f;
-	public override float SecondaryAttackDelay => 0.6f;
+	public override float SecondaryAttackDelay => 1.4f;
 	public override float SecondaryReloadDelay => 1f;
 
 	public override int MaxPrimaryAmmo => 8;
@@ -52,11 +52,12 @@ public class Shotgun : Gun
 			{
 				PrimaryAmmo -= 2;
 				ShootBullet( 10, 0.1f, 0, 6 );
-				PlaySound( "shotgun_shot" );
+				PlaySound( "shotgun_shot_double" );
 				(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 				if ( Game.IsClient )
 				{
-					ShootEffects();
+					Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
+					ViewModelEntity?.SetAnimParameter( "fire_double", true );
 					DoViewPunch( 10f );
 				}
 			} 

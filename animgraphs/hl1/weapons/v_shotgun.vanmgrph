@@ -579,7 +579,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -560.0, -16.0 ]
+					m_vecPosition = [ -560.0, -32.0 ]
 					m_nNodeID = 
 					{
 						m_id = 2034389393
@@ -588,7 +588,7 @@
 					m_sNote = ""
 					m_tagSpans = [  ]
 					m_sequenceName = "fire_double"
-					m_playbackSpeed = 1.0
+					m_playbackSpeed = 0.5
 					m_bLoop = false
 				}
 			},
