@@ -35,10 +35,12 @@ public class Crowbar : Melee
 					break;
 
 			}
+			TimeSincePrimaryAttack = 0;
 		}
 		else
 		{
 			PlaySound( "cbar_miss" );
+			TimeSincePrimaryAttack = -0.25f;
 		}
 		ViewModelEntity?.SetAnimParameter( "attack_has_hit", hit );
 		ViewModelEntity?.SetAnimParameter( "fire", true );
