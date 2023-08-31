@@ -16,7 +16,7 @@ public class Carriable : AnimatedEntity
 	public virtual string WorldModelPath => null;
 	public virtual string ViewModelPath => null;
 	public virtual string WorldPlayerModelPath => null;
-	public BaseViewModel ViewModelEntity { get; protected set; }
+	public Viewmodel ViewModelEntity { get; protected set; }
 	public TimeSince TimeSinceDeployed { get; set; }
 	public virtual CitizenAnimationHelper.HoldTypes HoldType => CitizenAnimationHelper.HoldTypes.Pistol;
 
@@ -42,7 +42,7 @@ public class Carriable : AnimatedEntity
 		if ( string.IsNullOrEmpty( ViewModelPath ) )
 			return;
 
-		ViewModelEntity = new BaseViewModel();
+		ViewModelEntity = new Viewmodel();
 		ViewModelEntity.Position = Position;
 		ViewModelEntity.Owner = Owner;
 		ViewModelEntity.EnableViewmodelRendering = true;
