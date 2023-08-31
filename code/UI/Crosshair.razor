@@ -3,27 +3,27 @@
 @using Sandbox.UI.Construct; 
 @using System;
 @namespace HLS2
-<style>
-	.root {
-		position:absolute;
-		width: 100%;
-		height: 100%;
-		justify-content: center;
-		align-items: center;
-		pointer-events: none;
-	}
 
-	.crosshair {
-		pointer-events: none;
-		background-color: white;
-		width: 5px;
-		height: 5px;
-		border-radius: 5px;
-		border-color:black;
-		border-width:1px;
-	}
-</style>
+<root>
+    <IconPanel @ref=Icon></IconPanel>
+</root>
 
-<root class="root"> 
-	<div class="crosshair"></div>
-</root> 
+@code
+{
+	public IconPanel Icon;
+
+	public override void Tick()
+	{
+		var p = Game.LocalPawn as Player;
+		if (p == null || !p.HasHEV) return;
+
+		if (p.Inventory.ActiveChild is Weapon weapon)
+		{
+			Icon.Style.SetBackgroundImage(weapon.CrosshairIcon);
+		}
+		else
+		{
+			Icon.Style.SetBackgroundImage("");
+		}
+	}
+}

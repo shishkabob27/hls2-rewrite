@@ -15,6 +15,26 @@ HudRootPanel {
     }
 }
 
+crosshair {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+
+    Iconpanel {
+        image-rendering: pixelated;
+        width: 24px;
+        height: 24px;
+        background-image-tint: #ffffff;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+    }
+}
+
+
 vitals {
     font-size: 64px;
     mix-blend-mode: lighten;
