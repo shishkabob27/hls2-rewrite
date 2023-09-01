@@ -18,14 +18,14 @@ public partial class HevSuit : ModelEntity
 	public string PickupSound { get; set; } = "sounds/hl1/fvox/bell.sound";
 	public override void StartTouch( Entity other )
 	{
-		Log.Error( "touch" );
 		base.Touch( other );
-		if (other is Player player)
+		if (other is Player player && !player.HasHEV)
 		{
 			player.HasHEV = true;
 			player.Suit = StartChargeAmount;
 			OnPlayerTouch.Fire( other );
 			Sound.FromScreen( To.Single(player),PickupSound );
+			Delete();
 		}
 	}
 
