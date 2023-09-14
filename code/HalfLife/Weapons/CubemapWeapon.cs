@@ -9,7 +9,6 @@ public class CubemapWeapon : Weapon
 	bool Mode = false;
 	public override void PrimaryAttack()
 	{
-		Log.Error( "lol" );
 		var a = new ModelEntity();
 		a.SetModel( "models/shadertest/envballs.vmdl" );
 		if (Mode)
